@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, fill 0.3s ease, stroke 0.3s ease;
+  }
+
+  :root {
+    /* Cores base */
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 262 61% 25%; /* #39216C */
+
+    /* Elementos de UI */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 262 61% 25%; /* #39216C */
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 262 61% 25%; /* #39216C */
+
+    /* Cores principais */
+    --primary: 262 61% 39%; /* #4527A0 - Roxo Bumerangue */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 84 100% 43%; /* #9CDD00 - Verde Lima */
+    --secondary-foreground: 262 61% 25%; /* #39216C */
+
+    /* Cores de apoio */
+    --muted: 270 10% 96.1%; /* #F5F3FA - Cinza levemente roxo */
+    --muted-foreground: 262 40% 45%; /* #7B6AA8 - Roxo médio */
+    --accent: 84 70% 43%; /* #85BB10 - Verde lima variação */
+    --accent-foreground: 262 61% 25%; /* #39216C */
+
+    /* Cores funcionais */
+    --destructive: 0 84.2% 60.2%; /* #E94057 */
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+    --border: 270 10% 89.8%; /* #E8E5F2 - Borda com tom roxo suave */
+    --input: 270 10% 89.8%; /* #E8E5F2 */
+    --ring: 262 61% 39%; /* #4527A0 - Ring em roxo Bumerangue */
+
+    /* Gráficos */
+    --chart-1: 84 100% 43%; /* #9CDD00 - Verde lima */
+    --chart-2: 120 70% 45%; /* #29A67C - Verde secundário */
+    --chart-3: 262 61% 39%; /* #4527A0 - Roxo */
+    --chart-4: 270 50% 60%; /* #9F70D0 - Roxo claro */
+    --chart-5: 230 60% 50%; /* #3366CC - Azul complementar */
+
+    /* Propriedades visuais */
+    --radius: 1rem; /* 16px */
+
+    /* Sidebar - Modo Claro */
+    --sidebar-background: 262 61% 39%; /* #4527A0 - Roxo Bumerangue */
+    --sidebar-foreground: 0 0% 100%; /* #FFFFFF */
+    --sidebar-primary: 84 100% 43%; /* #9CDD00 - Verde lima */
+    --sidebar-primary-foreground: 262 61% 25%; /* #39216C */
+    --sidebar-accent: 262 40% 50%; /* #7D6CB0 - Roxo médio-claro */
+    --sidebar-accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --sidebar-border: 262 30% 45%; /* #6A5A96 - Roxo médio */
+    --sidebar-ring: 84 100% 43%; /* #9CDD00 - Verde lima */
+  }
+
+  .dark {
+    /* Cores base */
+    --background: 262 45% 12%; /* #211538 - Roxo muito escuro */
+    --foreground: 0 0% 98%; /* #FAFAFA */
+
+    /* Elementos de UI */
+    --card: 262 45% 15%; /* #27193F - Roxo escuro */
+    --card-foreground: 0 0% 98%; /* #FAFAFA */
+    --popover: 262 45% 12%; /* #211538 */
+    --popover-foreground: 0 0% 98%; /* #FAFAFA */
+
+    /* Cores principais */
+    --primary: 84 100% 50%; /* #AAF000 - Verde lima brilhante */
+    --primary-foreground: 262 61% 39%; /* #4527A0 - Roxo Bumerangue */
+    --secondary: 262 30% 70%; /* #AC8AD7 - Roxo claro */
+    --secondary-foreground: 0 0% 98%; /* #FAFAFA */
+
+    /* Cores de apoio */
+    --muted: 262 30% 25%; /* #3F2C65 - Roxo muted */
+    --muted-foreground: 262 10% 80%; /* #CBBFDD - Roxo claro muted */
+    --accent: 262 40% 30%; /* #573D7D - Roxo médio */
+    --accent-foreground: 0 0% 98%; /* #FAFAFA */
+
+    /* Cores funcionais */
+    --destructive: 0 62.8% 30.6%; /* #9F1F2C - Vermelho escuro */
+    --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+    --border: 262 30% 30%; /* #493366 - Borda em roxo médio */
+    --input: 262 20% 30%; /* #483566 - Input em roxo médio */
+    --ring: 84 100% 50%; /* #AAF000 - Ring em verde lima */
+
+    /* Gráficos */
+    --chart-1: 84 100% 50%; /* #AAF000 - Verde lima mais brilhante */
+    --chart-2: 120 75% 45%; /* #29B67C - Verde secundário */
+    --chart-3: 262 50% 60%; /* #9F70D0 - Roxo mais claro */
+    --chart-4: 230 70% 60%; /* #4688FF - Azul mais vibrante */
+    --chart-5: 320 60% 60%; /* #FC77AC - Magenta complementar */
+
+    /* Sidebar - Modo Escuro */
+    --sidebar-background: 262 61% 25%; /* #33204D - Roxo mais escuro */
+    --sidebar-foreground: 0 0% 100%; /* #FFFFFF */
+    --sidebar-primary: 84 100% 50%; /* #AAF000 - Verde lima brilhante */
+    --sidebar-primary-foreground: 262 61% 39%; /* #4527A0 - Roxo Bumerangue */
+    --sidebar-accent: 262 40% 40%; /* #573D7D - Roxo médio */
+    --sidebar-accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --sidebar-border: 262 50% 40%; /* #7952C9 - Borda em roxo médio */
+    --sidebar-ring: 84 100% 50%; /* #AAF000 - Ring em verde lima */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
+}
+
+/* Cores personalizadas da Bumerangue */
+.bumerangue-purple {
+  color: #4527a0;
+}
+.dark .bumerangue-purple {
+  color: #9f70d0;
+}
+.bumerangue-lime {
+  color: #9cdd00;
+}
+.dark .bumerangue-lime {
+  color: #aaf000;
+}
+.bg-bumerangue-purple {
+  background-color: #4527a0;
+  color: white;
+}
+.dark .bg-bumerangue-purple {
+  background-color: #573d7d;
+  color: white;
+}
+.bg-bumerangue-lime {
+  background-color: #9cdd00;
+  color: #4527a0;
+}
+.dark .bg-bumerangue-lime {
+  background-color: #aaf000;
+  color: #4527a0;
+}
+.border-bumerangue-purple {
+  border-color: #4527a0;
+}
+.dark .border-bumerangue-purple {
+  border-color: #573d7d;
+}
+.border-bumerangue-lime {
+  border-color: #9cdd00;
+}
+.dark .border-bumerangue-lime {
+  border-color: #aaf000;
+}
+
+/* Ensure green buttons always have purple text */
+.dark button.bg-primary,
+.dark .bg-primary,
+.dark .bg-secondary,
+.dark [class*="bg-lime"],
+.dark [class*="bg-green"] {
+  color: #4527a0;
+}
+
+/* Ensure hover states maintain the correct text color */
+.dark button.bg-primary:hover,
+.dark .bg-primary:hover,
+.dark .bg-secondary:hover,
+.dark [class*="bg-lime"]:hover,
+.dark [class*="bg-green"]:hover {
+  color: #4527a0;
+}
+
+/* Gradient text utility for branding elements */
+.text-gradient-bumerangue {
+  background: linear-gradient(90deg, #4527a0, #9cdd00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.dark .text-gradient-bumerangue {
+  background: linear-gradient(90deg, #9f70d0, #aaf000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Timeline animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(156, 221, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(156, 221, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(156, 221, 0, 0);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+/* Improve chart text contrast in dark mode */
+.dark .recharts-pie-label-text {
+  fill: white !important;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8) !important;
+  font-weight: 500 !important;
+}
+
+.dark .recharts-tooltip-item-name,
+.dark .recharts-tooltip-item-value {
+  color: var(--foreground) !important;
+}
+
+.dark .recharts-legend-item-text {
+  color: var(--foreground) !important;
+}
+
+/* Improve chart axis and grid line visibility in dark mode */
+.dark .recharts-cartesian-axis-line,
+.dark .recharts-cartesian-axis-tick-line {
+  stroke: var(--border) !important;
+}
+
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  stroke: var(--border) !important;
+  opacity: 0.4;
+}
+
+.dark .recharts-text {
+  fill: var(--foreground) !important;
+}
+
+/* Improve badge contrast in dark mode */
+.dark .bg-red-900\/30 {
+  background-color: rgba(185, 28, 28, 0.3) !important;
+}
+
+.dark .bg-yellow-900\/30 {
+  background-color: rgba(217, 119, 6, 0.3) !important;
+}
+
+.dark .bg-blue-900\/30 {
+  background-color: rgba(30, 64, 175, 0.3) !important;
+}
+
+.dark .text-red-300 {
+  color: rgba(252, 165, 165, 1) !important;
+}
+
+.dark .text-yellow-300 {
+  color: rgba(253, 224, 71, 1) !important;
+}
+
+.dark .text-blue-300 {
+  color: rgba(147, 197, 253, 1) !important;
+}
